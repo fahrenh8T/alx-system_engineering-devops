@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -n 3 iacta
+cut -d$'\n' -f3 iacta
