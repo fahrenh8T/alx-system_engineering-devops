@@ -7,9 +7,5 @@ lst=$(ls)
 
 for store in $lst;
 do
-    if [ -f "$store" ] && [[ "$store" == *-* ]];
-    then
-        name_dash=$(echo "$store" | cut -d '-' -f2)
-        echo "$name_dash"
-    fi
+   echo "$store" | cut -d '-' -f2
 done
