@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Bash script that displays:
-    #content of the current directory in a list format
-    #where only the part of the name after the first dash is displayed
+#content of the current directory in a list format
+#where only the part of the name after the first dash is displayed
 
 lst=$(ls)
 
