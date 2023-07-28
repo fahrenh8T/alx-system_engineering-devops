@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#Bash script that displays:
+    #content of the current directory in a list format
+    #where only the part of the name after the first dash is displayed
+
+lst=$(ls)
+
+for store in $lst;
+do
+    if [ -f "$store" ] && [[ "$store" == *-* ]];
+    then
+        name_dash=$(echo "$store" | cut -d '-' -f2)
+        echo "$name_dash"
+    fi
+done
