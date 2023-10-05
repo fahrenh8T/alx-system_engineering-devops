@@ -25,5 +25,5 @@ frontend www-https
 
 backend www-backend
     balance  roundrobin
-    server 14832-web-01 52.3.220.183 check
-    server 14832-web-02 54.237.46.105 check
+    server 315926-web-01 52.3.220.183 check
+    server 315926-web-02 54.237.46.105 check
