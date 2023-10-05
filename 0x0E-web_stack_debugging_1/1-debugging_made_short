@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Nginx listens to port 80 of all active IPv4 IPs servers
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx start
+kill "$(pgrep 'nginx' | head -1)"
