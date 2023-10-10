@@ -1,13 +1,23 @@
 # puppet manifest to install nginx
-package { 'nginx':
-  ensure => installed,
+package {'nginx':
+  ensure => 'present',
 }
 
-file { '/var/www/html/index.html':
-  content => 'Hello World!',
+exec { 'update and install':
+  command  => 'sudo apt-get update ; sudo apt-get -y install nginx',
+  provider => shell,
+
 }
 
-service { 'nginx':
-  ensure  => running,
-  require => Package['nginx'],
+exec { 'Hello World':
+  command  => 'echo "Hello World!" | sudo tee /var/www/html/index.html',
+  provider => shell,
+}
+
+exec { 'sudo sed -i "/server_name _;/a rewrite ^/redirect_me/ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;" /etc/nginx/sites-available/default':
+  provider => shell,
+}
+
+exec { 'sudo service nginx restart':
+  provider => shell,
 }
