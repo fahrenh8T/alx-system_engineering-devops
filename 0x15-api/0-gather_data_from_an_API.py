@@ -1,17 +1,15 @@
 #!/usr/bin/python3
-""" using REST API, for a given employee ID,
-     returns information about his/her TODO list progress
-"""
+""" using REST API, for a given employee ID, returns information about his/her TODO list progress """
 import requests
 from sys import argv
 
 
 if __name__ == "__main__":
-    url = "https://jsonplaceholder.typicode.com/"
-    user = requests.get(url + "users/{}".format(argv[1])).json()
-    todos = requests.get(url + "todos", params={"userId": argv[1]}).json()
+    link = "https://jsonplaceholder.typicode.com/"
+    userid = requests.get(link + "users/{}".format(argv[1])).json()
+    todo = requests.get(link + "todos", params={"userId": argv[1]}).json()
 
-    completed = [t.get("title") for t in todos if t.get("completed") is True]
-    print("Employee {} is done with tasks({}/{}):".format(user.get("name"),
-          len(completed), len(todos)))
-    [print("\t {}".format(com)) for com in completed]
+    done = [req.get("title") for req in todo if req.get("completed") is True]
+    print("Employee {} is done with tasks({}/{}):".format(userid.get("name"),
+          len(done), len(todo)))
+    [print("\t {}".format(com)) for com in done]
