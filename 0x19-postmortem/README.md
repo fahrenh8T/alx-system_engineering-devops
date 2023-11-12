@@ -1,6 +1,6 @@
-# Postmortem
+# Postmortem -- The GitHub Alert Odyssey
 
-The GitHub Alert Odyssey. In the vast digital universe, where lines of code intertwine and repositories thrive, a peculiar incident unfurled in the Fix_My_Code_Challenge galaxy. This incident, akin to a silent comet, streaked through our GitHub cosmos, leaving ripples of dependency alerts in its wake. Let us embark on a journey through the stars of this GitHub Alert Odyssey.
+In the vast digital universe, where lines of code intertwine and repositories thrive, a peculiar incident unfurled in the Fix_My_Code_Challenge galaxy. This incident, akin to a silent comet, streaked through our GitHub cosmos, leaving ripples of dependency alerts in its wake. Let us embark on a journey through the stars of this GitHub Alert Odyssey.
 
 ## Issue Summary
 
